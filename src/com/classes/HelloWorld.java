@@ -8,13 +8,14 @@ import java.util.logging.Logger;
  **/
 public class HelloWorld {
 
+	//Log creation
 	private static final Logger LOGGER = Logger.getLogger(HelloWorld.class.getName());
 	HelloString helloString = new HelloString();
 
 	public void helloForLoop() {
 		int j = 0;
-		for (int i = 0; i < 9; i++) {
-			System.out.println(helloString.getHello() + " while loop  " + (i + 1) + " times");
+		for (int i = 0; i < 10; i++) {
+			System.out.println(helloString.getHello() + " for loop  " + (i + 1) + " times");
 			j++;
 		}
 		LOGGER.info("End of For Loop with " + (j + 1) + " iterations");
@@ -24,9 +25,9 @@ public class HelloWorld {
 		int i = 0;
 		boolean looper = true;
 		while (looper) {
-			System.out.println(helloString.getHello() + " for loop  " + (i + 1) + " times");
+			System.out.println(helloString.getHello() + " while loop  " + (i + 1) + " times");
 			i = i + 1;
-			if (i > 9) {
+			if (i >= 10) {
 				looper = false;
 			}
 		}
